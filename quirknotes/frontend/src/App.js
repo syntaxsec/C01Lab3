@@ -40,7 +40,7 @@ function App() {
 
   const deleteNote = async (entry) => {
     try {
-      await fetch('http://127.0.0.1:4000/deleteNote/${entry._id}', { method: 'DELETE' }).then(
+      await fetch(`http://127.0.0.1:4000/deleteNote/${entry._id}`, { method: 'DELETE' }).then(
         async (response) => {
           if (response.ok) {
             await response.json().then((data) => {
@@ -61,7 +61,7 @@ function App() {
 
   const deleteAllNotes = async () => {
     try {
-      await fetch('http://127.0.0.1:4000/deleteAllNotes', { method: 'DELETE' }).then(
+      await fetch(`http://127.0.0.1:4000/deleteAllNotes`, { method: 'DELETE' }).then(
         async (response) => {
           if (response.ok) {
             await response.json().then((data) => {
